@@ -1,66 +1,49 @@
-
-
-public class Pokemon
-{
-    private static int level ;
-    private static int HP ;
-    private static int SP ;
-    private String nameP = "---";
-    public static void main(String[] args){
+public abstract class Pokemon{
+    //Attribute
+    protected static String name;
+    protected static int hp;
     
-    }
-    public  Pokemon()
-    {
-        Nopoke();
-
-    }
-    
-    public String getnameP()
-    { return nameP; }
-
-    public static int getlevel()
-    { return level; }
-
-    public int getHP()
-    { return HP; }
-
-    public int getSP()
-    { return SP; }
-
-    public void Nopoke()
-    {
-        nameP ="--";
-        level = 0;
-        HP = 0;
-        SP = 0;
+    //Constructor
+    public Pokemon(String name){
+        this.name = name;
+        this.hp = 0;
     }
 
-    public void poke1()
-    {
-        nameP ="Bulbasaur";
-        level = 1;
-        HP = 8;
-        SP = 12;
+    public Pokemon(String name, int maxHP){
+        this.name = name;
+        this.hp = (int)(Math.random()*maxHP);
     }
-    public void poke2()
-    {
-        nameP ="Charmander";
-        level = 1;
-        HP = 10;
-        SP = 10;
+
+    //Accessor Method
+    public static String getName(){
+        return name;
     }
-    public void poke3()
-    {
-        nameP ="Squirtle";
-        level = 1;
-        HP = 12;
-        SP = 8;
+
+    public static int getHP(){
+        return hp;
     }
-    public void poke4()
-    {
-        nameP ="Pidgey";
-        level = 1;
-        HP = 9;
-        SP = 9;
+
+    //Mutator Method
+    public boolean damage(int value){
+        if(hp == 0){
+            return false;
+        }
+        int currentHP = hp - value;
+        if(currentHP >= 0){
+            this.hp = currentHP;
+        }
+        else{
+            this.hp = 0;
+        }
+        return true;
+
+    }
+
+    //Abstract Method
+    public abstract void attack(Pokemon enemy);
+
+    //Method
+    public String toString(){
+        return name;
     }
 }
