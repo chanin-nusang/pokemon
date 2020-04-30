@@ -2,7 +2,7 @@ import java.util.*;
 
 public class Trainer {
     //Attribute
-    private static ArrayList<Pokemon> bag;
+    private static ArrayList<Pokemon> bag = new ArrayList<Pokemon>();
     private Scanner sc;
     private static String name;
     private static int level = 1;
@@ -14,9 +14,9 @@ public class Trainer {
 
     //Constructor
     public Trainer(){
-        bag = new ArrayList<Pokemon>();
-        bag.add(new Pikachu("Pikachu of Satochi")); // default pokemon in bag
-        sc = new Scanner(System.in);
+        //bag = new ArrayList<Pokemon>();
+        //bag.add(new Pikachu("Pikachu of Satochi")); // default pokemon in bag
+        //sc = new Scanner(System.in);
     }
 
     public void setName(String name){
@@ -156,4 +156,8 @@ public class Trainer {
     public static ArrayList<Pokemon> getBag(){
         return bag;
     }
+    public void setPokemonName(String n, int ind) { // (ArrayList<Pokemon> bgg, int ind){
+        bag.get(ind).setName(n);
+    }
+
 }

@@ -1,11 +1,12 @@
-public class Kabigon extends Pokemon{
+public class PokDrogonite extends Pokemon {
     //Constructor
-    public Kabigon(String name){
-        super(name, 1000, "");
+    public PokDrogonite(String name){
+        super(name, 150, "image/p_drogonite.gif");
     }
+
     //Abstract Method from Pokemon class 
     public void attack(Pokemon enemy){
         System.out.println("Pokemon " + name + " attack " + enemy.getName());
-        enemy.damage(5);
+        enemy.damage(100);
     }
 }

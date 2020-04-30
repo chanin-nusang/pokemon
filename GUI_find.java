@@ -31,7 +31,12 @@ public class GUI_find extends JFrame{
 		});
 		btn_menu.setIcon(new ImageIcon("image/b_menu.png"));
 		btn_menu.setBounds(10, 10, 85, 40);
-        frame.getContentPane().add(btn_menu);
+		frame.getContentPane().add(btn_menu);
+		
+		JLabel Lab_bb = new JLabel("" + Trainer.getBall());
+		Lab_bb.setBounds(690, 25, 200, 50);
+		Lab_bb.setFont(new Font("Pokemon Solid", Font.PLAIN, 22));
+		frame.getContentPane().add(Lab_bb);
 
         JLabel Lab_pokbag = new JLabel(" ");
 		Lab_pokbag.setIcon(new ImageIcon("image/findhead.png"));

@@ -1,12 +1,12 @@
-public class Raichu extends Pokemon {
-    //Constructor
-    public Raichu(String name){
-        super(name, 20, "");
+public class PokVictreebel extends Pokemon {
+
+    public PokVictreebel (String name){
+        super(name, 170, "image/p_victreebel.gif");
     }
 
-    //Abstract Method from Pokemon class 
     public void attack(Pokemon enemy){
         System.out.println("Pokemon " + name + " attack " + enemy.getName());
         enemy.damage(100);
     }
+
 }

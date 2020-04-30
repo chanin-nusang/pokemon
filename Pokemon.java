@@ -2,26 +2,40 @@ public abstract class Pokemon{
     //Attribute
     protected static String name;
     protected static int hp;
+    protected static String image;
     
     //Constructor
     public Pokemon(String name){
         this.name = name;
         this.hp = 0;
+        this.image = "";
     }
 
-    public Pokemon(String name, int maxHP){
+    public Pokemon(String name, int maxHP, String image){
         this.name = name;
         this.hp = (int)(Math.random()*maxHP);
+        this.image = image;
     }
 
+    public void setName(String name){
+        this.name = name;
+    }
     //Accessor Method
-    public static String getName(){
+    public String getName(){
         return name;
     }
 
+    public void setHP(int hp){
+        this.hp = hp;
+    }
     public static int getHP(){
         return hp;
     }
+    
+    public String getImage(){
+        return image;
+    }
+
 
     //Mutator Method
     public boolean damage(int value){

@@ -1,11 +1,11 @@
 public class Pikachu extends Pokemon{
     //Constructor
     public Pikachu(String name){
-        super(name, 10);
+        super(name, 10, "");
     }
 
     public Pikachu(String name, int maxHP){
-        super(name, maxHP);
+        super(name, maxHP, "");
     }
 
     //Abstract Method from Pokemon class 
